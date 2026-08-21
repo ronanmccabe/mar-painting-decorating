@@ -56,9 +56,11 @@
     border:1px solid transparent; transition:all .2s ease;
   }
   .btn-primary{ background:var(--sage-dark); color:var(--white); }
-  .btn-primary:hover{ background:var(--sage); }
   .btn-ghost{ border-color:var(--sage-dark); color:var(--sage-dark); }
-  .btn-ghost:hover{ background:var(--sage-dark); color:var(--white); }
+  @media (hover:hover) and (pointer:fine){
+    .btn-primary:hover{ background:var(--sage); }
+    .btn-ghost:hover{ background:var(--sage-dark); color:var(--white); }
+  }
   .btn-light{ border-color:rgba(255,255,255,.6); color:var(--white); }
   .btn-light:hover{ background:rgba(255,255,255,.14); }
   section{ padding:96px 0; }
@@ -199,7 +201,7 @@
 
   /* ---------- footer ---------- */
   footer{ background:#40493f; color:var(--cream); padding:36px 0 26px; }
-  .footer-row{ display:flex; align-items:center; justify-content:space-between; gap:30px; padding:20px 0; flex-wrap:wrap; }
+  .footer-row{ display:flex; align-items:center; justify-content:space-between; gap:30px; padding:20px 0; margin-bottom:8px; flex-wrap:wrap; }
   .footer-contact{ display:flex; gap:28px; flex-wrap:wrap; }
   .footer-contact span{ display:flex; align-items:center; gap:8px; font-size:.82rem; color:rgba(247,243,236,.85); }
   .footer-contact svg{ width:15px; height:15px; color:var(--terracotta); flex-shrink:0; }
@@ -208,8 +210,7 @@
   footer .wordmark-mar small{ color:var(--terracotta); }
   footer p.tag{ color:rgba(247,243,236,.65); font-size:.8rem; line-height:1.4; margin:0; text-align:right; }
   footer a:hover{ color:var(--white); }
-  .footer-bottom-outer{ border-top:1px solid rgba(247,243,236,.15); }
-  .footer-bottom{ padding-top:24px; display:flex; justify-content:space-between; font-size:.78rem; color:rgba(247,243,236,.55); flex-wrap:wrap; gap:10px; }
+  .footer-bottom{ padding-top:36px; display:flex; justify-content:space-between; font-size:.78rem; color:rgba(247,243,236,.55); flex-wrap:wrap; gap:10px; }
   .socials{ display:flex; gap:12px; }
   .socials a{ width:34px; height:34px; border:1px solid rgba(247,243,236,.3); border-radius:50%; display:flex; align-items:center; justify-content:center; }
   .socials svg{ width:15px; height:15px; }
@@ -252,6 +253,8 @@
     .hero-art{ height:240px; }
     .about-art{ height:240px; }
     .footer-contact{ flex-direction:column; gap:10px; }
+    .footer-row{ margin-bottom:20px; }
+    .footer-bottom{ padding-top:20px; }
     .wrap{ padding:0 20px; }
     .nav-row{ padding-top:16px; padding-bottom:16px; gap:16px; }
     header .wrap{ padding-left:28px; padding-right:28px; }
@@ -324,7 +327,7 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-right">
-        <span class="phone-pill"><svg width="16" height="16" style="color:var(--terracotta)"><use href="#ic-phone"/></svg> +34 632 296 417</span>
+        <a href="https://wa.me/34632296417?text=Hi%2C%20I%27d%20like%20a%20free%20painting%20quote" target="_blank" rel="noopener" class="phone-pill" style="text-decoration:none;"><svg width="16" height="16" style="color:var(--terracotta)"><use href="#ic-whatsapp"/></svg> +34 632 296 417</a>
         <a href="#contact" class="quote-link">Get a Quote</a>
         <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -562,8 +565,8 @@
         <p class="lead">Tell us a little about the job and we'll get back to you with a clear, no-obligation quote, usually within 24 hours.</p>
 
         <div class="contact-detail">
-          <svg><use href="#ic-phone"/></svg>
-          <div><h5>Phone</h5><a href="tel:+34632296417">+34 632 296 417</a></div>
+          <svg><use href="#ic-whatsapp"/></svg>
+          <div><h5>WhatsApp</h5><a href="https://wa.me/34632296417?text=Hi%2C%20I%27d%20like%20a%20free%20painting%20quote" target="_blank" rel="noopener">+34 632 296 417</a></div>
         </div>
         <div class="contact-detail">
           <svg><use href="#ic-mail"/></svg>
@@ -613,7 +616,7 @@
         <span class="wordmark-mar">MAR<small>Painting &amp; Decorating</small></span>
       </span>
       <div class="footer-contact">
-        <span><svg><use href="#ic-phone"/></svg> +34 632 296 417</span>
+        <span><svg><use href="#ic-whatsapp"/></svg> <a href="https://wa.me/34632296417?text=Hi%2C%20I%27d%20like%20a%20free%20painting%20quote" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">+34 632 296 417</a></span>
         <span><svg><use href="#ic-mail"/></svg> info@marpaintingdecorating.com</span>
         <span><svg><use href="#ic-pin"/></svg> Orihuela Costa</span>
       </div>
@@ -717,7 +720,7 @@
         cta_h3:"Now taking bookings for November", cta_p:"Call Ronan or Martin to arrange your free, no-obligation quote.", cta_btn:"Get in Touch",
         contact_eyebrow:"Get in Touch", contact_h2:"Request Your Free Quote",
         contact_lead:"Tell us a little about the job and we'll get back to you with a clear, no-obligation quote, usually within 24 hours.",
-        cd1_l:"Phone", cd2_l:"Email", cd3_l:"Area", cd3_v:"Orihuela Costa & surrounding areas", cd4_l:"Hours", cd4_v:"Mon–Fri, 8:00–18:00",
+        cd1_l:"WhatsApp", cd2_l:"Email", cd3_l:"Area", cd3_v:"Orihuela Costa & surrounding areas", cd4_l:"Hours", cd4_v:"Mon–Fri, 8:00–18:00",
         f_name:"Name", f_phone:"Phone", f_email:"Email", f_job:"Type of Job", f_msg:"Tell Us About The Job",
         f_name_ph:"Your name", f_phone_ph:"+34 ...", f_email_ph:"you@email.com", f_msg_ph:"Rooms, size, timeframe...",
         f_job_opts:["Interior painting","Exterior / facade","Doors, trims & woodwork","Wallpaper hanging","Full property refresh","Not sure, advise me"],
@@ -766,7 +769,7 @@
         cta_h3:"Ya Aceptamos Reservas para Noviembre", cta_p:"Llama a Ronan o Martin para concertar tu presupuesto gratuito y sin compromiso.", cta_btn:"Contáctanos",
         contact_eyebrow:"Contáctanos", contact_h2:"Pide Tu Presupuesto Gratis",
         contact_lead:"Cuéntanos un poco sobre el trabajo y te responderemos con un presupuesto claro y sin compromiso, normalmente en menos de 24 horas.",
-        cd1_l:"Teléfono", cd2_l:"Correo", cd3_l:"Zona", cd3_v:"Orihuela Costa y alrededores", cd4_l:"Horario", cd4_v:"Lun–Vie, 8:00–18:00",
+        cd1_l:"WhatsApp", cd2_l:"Correo", cd3_l:"Zona", cd3_v:"Orihuela Costa y alrededores", cd4_l:"Horario", cd4_v:"Lun–Vie, 8:00–18:00",
         f_name:"Nombre", f_phone:"Teléfono", f_email:"Correo Electrónico", f_job:"Tipo de Trabajo", f_msg:"Cuéntanos Sobre el Trabajo",
         f_name_ph:"Tu nombre", f_phone_ph:"+34 ...", f_email_ph:"tu@email.com", f_msg_ph:"Habitaciones, tamaño, plazos...",
         f_job_opts:["Pintura de interiores","Exterior / fachada","Puertas, molduras y carpintería","Colocación de papel pintado","Renovación completa","No estoy seguro, aconséjenme"],
