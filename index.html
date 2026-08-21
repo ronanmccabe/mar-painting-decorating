@@ -208,7 +208,8 @@
   footer .wordmark-mar small{ color:var(--terracotta); }
   footer p.tag{ color:rgba(247,243,236,.65); font-size:.8rem; line-height:1.4; margin:0; text-align:right; }
   footer a:hover{ color:var(--white); }
-  .footer-bottom{ border-top:1px solid rgba(247,243,236,.15); padding-top:24px; display:flex; justify-content:space-between; font-size:.78rem; color:rgba(247,243,236,.55); flex-wrap:wrap; gap:10px; }
+  .footer-bottom-outer{ border-top:1px solid rgba(247,243,236,.15); }
+  .footer-bottom{ padding-top:24px; display:flex; justify-content:space-between; font-size:.78rem; color:rgba(247,243,236,.55); flex-wrap:wrap; gap:10px; }
   .socials{ display:flex; gap:12px; }
   .socials a{ width:34px; height:34px; border:1px solid rgba(247,243,236,.3); border-radius:50%; display:flex; align-items:center; justify-content:center; }
   .socials svg{ width:15px; height:15px; }
@@ -251,6 +252,33 @@
     .hero-art{ height:240px; }
     .about-art{ height:240px; }
     .footer-contact{ flex-direction:column; gap:10px; }
+    .wrap{ padding:0 20px; }
+    .nav-row{ padding:16px 0; gap:16px; }
+
+    /* Grids collapse to a single column below 560px so cards never get squeezed */
+    .svc-grid, .trust-grid, .gallery-grid, .process-grid{ grid-template-columns:1fr; }
+    .process-grid::before{ display:none; }
+
+    .svc-card{ padding:28px 22px; }
+    .trust-item .icon-ring{ width:46px; height:46px; }
+
+    /* Hero / CTAs stack and go full width so nothing overflows or gets cramped */
+    .hero-ctas{ flex-direction:column; align-items:stretch; }
+    .hero-ctas .btn{ width:100%; justify-content:center; text-align:center; }
+    .hero h1{ font-size:1.85rem; }
+    .about h2, .services-head h2, .coverage h2{ font-size:1.7rem; }
+
+    .cta-band .wrap{ flex-direction:column; align-items:flex-start; padding:32px 20px; }
+    .cta-band .cta-right{ width:100%; }
+    .cta-band .cta-right .btn{ flex:1; justify-content:center; text-align:center; }
+
+    .form-row{ grid-template-columns:1fr; }
+    .form-card{ padding:26px 20px; }
+
+    .founders{ grid-template-columns:1fr; }
+    .map-art{ height:260px; }
+
+    nav.main-links{ display:none; }
   }
 </style>
 </head>
@@ -551,10 +579,10 @@
 
       <form class="form-card" id="quote-form" action="https://formsubmit.co/info@marpaintingdecorating.com" method="POST">
         <div class="form-row">
-          <div><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
-          <div><label>Phone</label><input type="tel" name="phone" placeholder="+34 ..." required></div>
+          <div><label>Name</label><input type="text" name="name" placeholder="Your name" autocomplete="name" required></div>
+          <div><label>Phone</label><input type="tel" name="phone" placeholder="+34 ..." autocomplete="tel" inputmode="tel" required></div>
         </div>
-        <div class="full"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+        <div class="full"><label>Email</label><input type="email" name="email" placeholder="you@email.com" autocomplete="email" inputmode="email" required></div>
         <div class="full"><label>Type of job</label>
           <select name="job_type">
             <option>Interior painting</option>
@@ -572,7 +600,8 @@
         <input type="hidden" name="_next" value="https://marpaintingdecorating.com/#contact">
         <button class="btn btn-primary" type="submit" id="quote-submit">Request Free Quote</button>
       </form>
-  </script>
+    </div>
+  </section>
 
   <!-- ============ FOOTER ============ -->
   <footer>
@@ -594,9 +623,11 @@
         <p class="tag">Quality finishes.<br>Beautiful spaces.</p>
       </div>
     </div>
-    <div class="wrap footer-bottom">
-      <span>&copy; <span id="year"></span> MAR Painting &amp; Decorating. All rights reserved.</span>
-      <span>Site by you, built with care.</span>
+    <div class="footer-bottom-outer">
+      <div class="wrap footer-bottom">
+        <span>&copy; <span id="year"></span> MAR Painting &amp; Decorating. All rights reserved.</span>
+        <span>Site by you, built with care.</span>
+      </div>
     </div>
   </footer>
 
