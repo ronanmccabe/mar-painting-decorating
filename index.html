@@ -342,8 +342,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 <style>
-  .testimonial-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; align-items:stretch; max-width:1080px; margin:0 auto; }
-  .testimonial-card{ margin:0; display:flex; flex-direction:column; text-align:center; background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:44px 40px 36px; }
+  .footer-bottom a.privacy-link{ color:inherit; text-decoration:underline; text-underline-offset:3px; }
+  .footer-bottom a.privacy-link:hover{ opacity:.8; }
+</style>
+<style>
+  .testimonial-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:stretch; max-width:1200px; margin:0 auto; }
+  .testimonial-card{ margin:0; display:flex; flex-direction:column; text-align:center; background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:40px 30px 32px; }
   .testimonial-card .t-quote{ color:var(--terracotta); margin:0 auto 14px; display:block; }
   .t-stars{ display:flex; justify-content:center; gap:4px; color:var(--terracotta); margin-bottom:20px; }
   .testimonial-card blockquote{ font-family:'Lora',Georgia,serif; font-style:italic; font-size:1.08rem; line-height:1.6; color:var(--sage-dark); margin:0; }
@@ -351,7 +355,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .t-name{ font-weight:600; color:var(--ink); font-size:.95rem; }
   .t-src{ font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); }
   .t-cta{ text-align:center; margin-top:32px; }
-  @media (max-width:860px){ .testimonial-grid{ grid-template-columns:1fr; } }
+  @media (max-width:1100px){ .testimonial-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:760px){ .testimonial-grid{ grid-template-columns:1fr; } }
   @media (max-width:560px){ .testimonial-card{ padding:36px 22px 30px; } .testimonial-card blockquote{ font-size:1.02rem; } }
 </style>
 <style>
@@ -576,6 +581,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figure class="testimonial-card">
           <svg class="t-quote" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 8h4v4c0 2.2-1.8 4-4 4v-2c1 0 2-.9 2-2H7V8zm8 0h4v4c0 2.2-1.8 4-4 4v-2c1 0 2-.9 2-2h-2V8z"/></svg>
           <div class="t-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg></div>
+          <blockquote>Must thank Martin and Ronan for the excellent work they did on my Villa. The preparatory work was a pleasure to watch. The first coat the second coat and attention to detail was outstanding. Thanks also for the beautiful fence you erected. Thanks again Dermot.</blockquote>
+          <figcaption><span class="t-name">Dermot M.</span><span class="t-src">Google review</span></figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <svg class="t-quote" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 8h4v4c0 2.2-1.8 4-4 4v-2c1 0 2-.9 2-2H7V8zm8 0h4v4c0 2.2-1.8 4-4 4v-2c1 0 2-.9 2-2h-2V8z"/></svg>
+          <div class="t-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3-4.8-4.3 6.4-.6z" fill="currentColor"/></svg></div>
           <blockquote>Amazing guys did a fantastic job<br>Arrival on time every morning<br>Very professional<br>Highly recommend</blockquote>
           <figcaption><span class="t-name">Bernie Kiernan</span><span class="t-src">Google review</span></figcaption>
         </figure>
@@ -761,7 +772,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="footer-bottom-outer">
       <div class="wrap footer-bottom">
-        <span>&copy; <span id="year"></span> MAR Painting &amp; Decorating. All rights reserved.</span>
+        <span>&copy; <span id="year"></span> MAR Painting &amp; Decorating. All rights reserved. &nbsp;&middot;&nbsp; <a href="/privacy" class="privacy-link" data-i18n="privacy_link">Privacy Policy</a></span>
         <span>Site by you, built with care.</span>
       </div>
     </div>
@@ -811,7 +822,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   (function(){
     var STR = {
       en: {
-        nav_home:"Home", nav_about:"About Us", nav_services:"Services", nav_gallery:"Gallery", nav_work:"Recent Work", nav_testi:"Testimonials", nav_contact:"Contact",
+        nav_home:"Home", nav_about:"About Us", nav_services:"Services", nav_gallery:"Gallery", nav_work:"Recent Work", privacy_link:"Privacy Policy", nav_testi:"Testimonials", nav_contact:"Contact",
         quote_link:"Get a Quote",
         hero_eyebrow:"Orihuela Costa & Surrounding Areas",
         hero_h1:"Professional Interior Painting Across Orihuela Costa",
@@ -868,7 +879,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         footer_site:"Site by you, built with care."
       },
       es: {
-        nav_home:"Inicio", nav_about:"Sobre Nosotros", nav_services:"Servicios", nav_gallery:"Galería", nav_work:"Trabajos Recientes", nav_testi:"Opiniones", nav_contact:"Contacto",
+        nav_home:"Inicio", nav_about:"Sobre Nosotros", nav_services:"Servicios", nav_gallery:"Galería", nav_work:"Trabajos Recientes", privacy_link:"Política de Privacidad", nav_testi:"Opiniones", nav_contact:"Contacto",
         quote_link:"Pide Presupuesto",
         hero_eyebrow:"Orihuela Costa y Alrededores",
         hero_h1:"Pintura de Interiores Profesional en Orihuela Costa",
@@ -1023,6 +1034,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       }
       setText(document.getElementById('gal-more'), t.gal_more);
+      document.querySelectorAll('.privacy-link').forEach(function(a){ a.textContent = t.privacy_link; });
       var galCards = document.querySelectorAll('.gallery-grid .gallery-card span');
       ['gal1','gal2','gal3','gal4','gal5','gal6'].forEach(function(key,i){
         if(galCards[i]) setText(galCards[i], t[key]);
